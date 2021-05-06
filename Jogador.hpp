@@ -4,13 +4,14 @@
  * Autor: Pedro Henrique da Silva Bueno;       *   
  * Matrícula: 201918771                        *
  * * * * * * * * * * * * * * * * * * * * * * * */
+#ifndef Jogador_hpp
+#define Jogador_hpp
 
 #include<iostream>
 using namespace std;
 
 class Jogador
 {
-
     public:
         Jogador(string nome, string nascionalidade, string cat_atuacao, int dia, int mes, int ano, float salario_bruto);
         
@@ -43,6 +44,6 @@ class Jogador
         float salario_bruto;
 
         int static id;
-        
-    
 };
+
+#endif /* Jogador_hpp */
