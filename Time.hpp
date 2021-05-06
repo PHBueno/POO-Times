@@ -4,6 +4,8 @@
  * Autor: Pedro Henrique da Silva Bueno;                 *   
  * Matrícula: 201918771;                                 *
  * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+#ifndef Time_hpp
+#define Time_hpp
 
 #include<iostream>
 #include<vector>
@@ -14,12 +16,14 @@ class Time
 {
 
     public:
+        Time();
         Time(string nome, string categoria);
         
         string get_nome_time();
         string get_cat_time();
         int get_id_time();
 
+        void busca_jogador(string nome);
         void adiciona_jogador(string nome, string categoria, string nascionalidade,int dia, int mes, int ano, float salario_bruto);
         void relatorio_geral();
         void relatorio_financeiro();
@@ -33,3 +37,5 @@ class Time
         vector<Jogador> jogadores; // Vetor dinâmico para jogadores;
         
 };
+
+#endif
