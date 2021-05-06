@@ -16,12 +16,12 @@ class Time
 {
 
     public:
-        Time();
         Time(string nome, string categoria);
         
         string get_nome_time();
         string get_cat_time();
         int get_id_time();
+        vector <float> get_salarios();
 
         void busca_jogador(string nome);
         void adiciona_jogador(string nome, string categoria, string nascionalidade,int dia, int mes, int ano, float salario_bruto);

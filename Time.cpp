@@ -33,7 +33,7 @@ void Time::relatorio_geral()
         cout << "Salário Bruto: " << jogadores[i].get_salarioBruto() << endl;
         cout << "\n\n";
     }
-    cout << "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
+    // cout << "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
 
 }
 
@@ -56,9 +56,10 @@ void Time::relatorio_financeiro()
 
 void Time::busca_jogador(string nome)
 {
+    cout << "\n=-=-=-=-=-=-=-=-= Time: " << this->nome << " =-=-=-=-=-=-=-=-=\n";
     for(int i=0; i<jogadores.size(); i++)
     {
-        if(jogadores[i].get_nome() == nome) // O método retorna negativo se a idade for maior que 60 anos;
+        if(jogadores[i].get_nome() == nome)
         {
             cout << "Nome: " << jogadores[i].get_nome() << endl;
             cout << "Idade: " << jogadores[i].get_idade() << endl;
@@ -82,4 +83,14 @@ int Time::get_id_time()
 string Time::get_cat_time()
 {
     return categoria;
+}
+
+vector <float> Time::get_salarios()
+{
+    vector <float> salarios;
+    for(int i=0; i<jogadores.size(); i++)
+    {
+        salarios.push_back(jogadores[i].get_salarioBruto());
+    }
+    return salarios;
 }
