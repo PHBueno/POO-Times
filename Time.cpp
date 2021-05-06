@@ -54,6 +54,21 @@ void Time::relatorio_financeiro()
     cout << "\n=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=\n";
 }
 
+void Time::busca_jogador(string nome)
+{
+    for(int i=0; i<jogadores.size(); i++)
+    {
+        if(jogadores[i].get_nome() == nome) // O método retorna negativo se a idade for maior que 60 anos;
+        {
+            cout << "Nome: " << jogadores[i].get_nome() << endl;
+            cout << "Idade: " << jogadores[i].get_idade() << endl;
+            cout << "Salário Bruto: " << jogadores[i].get_salarioBruto() << endl;
+            cout << "Salário Líquido: " << jogadores[i].salario_liquido() << endl;
+        }
+        cout << "\n\n";
+    }
+}
+
 string Time::get_nome_time()
 {
     return nome;
